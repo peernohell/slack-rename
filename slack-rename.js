@@ -13,7 +13,7 @@ function getSettings(team, success, failure) {
 
     var response = x.response;
     if (!response) {
-      failure('No response from Google Image search!');
+      failure('No response!');
       return;
     }
     success(response);
@@ -23,7 +23,6 @@ function getSettings(team, success, failure) {
   };
   x.send();
 }
-
 
 function renderStatus(statusText) {
   document.getElementById('status').textContent = statusText;
